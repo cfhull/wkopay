@@ -1,15 +1,19 @@
 import { MusicVideo } from './MusicVideo';
-import { Player as RemotionPlayer } from '@remotion/player';
+import { Player as RemotionPlayer, PlayerRef } from '@remotion/player';
 import { AbsoluteFill } from 'remotion';
+import { RefObject } from 'react';
 
-const Player: React.FC = ({ playerRef }) => {
+type Props = {
+  playerRef: RefObject<PlayerRef>;
+};
+
+const Player = ({ playerRef }: Props) => {
   return (
     <AbsoluteFill>
       <RemotionPlayer
         ref={playerRef}
         controls
         style={{ width: '100%', height: '100%' }}
-        id="MusicVideo"
         component={MusicVideo}
         durationInFrames={6660}
         fps={30}

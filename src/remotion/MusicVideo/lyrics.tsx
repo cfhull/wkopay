@@ -1,4 +1,11 @@
-export default [
+export interface Lyrics {
+  duration: number;
+  content: string;
+  startOfParagraph: null;
+  startTime: number;
+}
+
+const lyrics: Lyrics[] = [
   {
     duration: 0,
     content: 'What kind of Pokémon are you?',
@@ -416,3 +423,5 @@ export default [
     startTime: 215.2,
   },
 ];
+
+export default lyrics;

@@ -4,6 +4,7 @@ import { AbsoluteFill, useCurrentFrame, useVideoConfig } from 'remotion';
 import data from './lyrics';
 import audio from './audio/wkopay.mp3';
 import Pokeball from '../../Pokeball';
+import { findLastIndex } from 'lodash';
 
 const subtitle: React.CSSProperties = {
   fontFamily: 'SF Pro Text, Helvetica, Arial, sans-serif',
@@ -16,16 +17,16 @@ const subtitle: React.CSSProperties = {
 
 const LINE_OFFSET = 0.5;
 
-export const MusicVideo: React.FC<{
-  titleText: string;
-  titleColor: string;
-}> = ({ titleText, titleColor }) => {
+export const MusicVideo = () => {
   const frame = useCurrentFrame();
   const { durationInFrames, fps } = useVideoConfig();
 
-  const lineIndex = data.findLastIndex(
-    (x) => x.startTime - LINE_OFFSET < frame / fps
+  const lineIndex = findLastIndex(
+    data,
+    ({ startTime }: { startTime: number }) =>
+      startTime - LINE_OFFSET < frame / fps
   );
+
   const line = lineIndex < 0 ? '' : data[lineIndex]?.content;
 
   return (
