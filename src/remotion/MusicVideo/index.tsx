@@ -34,7 +34,7 @@ export const MusicVideo = () => {
       <AbsoluteFill
         style={{
           background: `url(${staticFile(
-            './assets/images/background_tile.png'
+            './wkopay/assets/images/background_tile.png'
           )})`,
           objectFit: 'cover',
           backgroundRepeat: 'repeat-x',
@@ -42,7 +42,7 @@ export const MusicVideo = () => {
           width: `calc(100% + ${durationInFrames}px)`,
         }}
       />
-      <Audio src={staticFile('./assets/audio/wkopay.mp3')} />
+      <Audio src={staticFile('./wkopay/assets/audio/wkopay.mp3')} />
       <div style={subtitle}>{line}</div>
     </AbsoluteFill>
   );
