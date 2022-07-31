@@ -34,8 +34,8 @@ jobs:
         uses: actions/configure-pages@v1
       - name: Run Build
         run: |
-        yarn install
-        yarn build
+          yarn install
+          yarn build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
