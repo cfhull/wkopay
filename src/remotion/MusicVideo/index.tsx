@@ -1,10 +1,10 @@
 import { Audio } from 'remotion';
-import { staticFile } from 'remotion';
 import { AbsoluteFill, useCurrentFrame, useVideoConfig } from 'remotion';
 import data, { Lyrics } from './lyrics';
 import { findLastIndex } from 'lodash';
 import Pokemon from './Pokemon';
 import { Background } from './Background';
+import audio from '/assets/audio/wkopay.mp3';
 
 const lyricStyles: React.CSSProperties = {
   fontFamily: 'Pokemon, Helvetica, Arial, sans-serif',
@@ -38,7 +38,7 @@ export const MusicVideo = () => {
   return (
     <AbsoluteFill>
       <Background />
-      <Audio src={staticFile('/assets/audio/wkopay.mp3')} />
+      <Audio src={audio} />
       {lyricData && (
         <>
           <Pokemon src={lyricData.pokemon} />

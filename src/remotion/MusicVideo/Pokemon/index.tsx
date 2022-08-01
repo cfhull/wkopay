@@ -1,5 +1,5 @@
 import { findLastIndex } from 'lodash';
-import { Img, staticFile } from 'remotion';
+import { Img } from 'remotion';
 import { useCurrentFrame, useVideoConfig } from 'remotion';
 import data from '../lyrics';
 import styles from './pokemon.module.css';
@@ -24,7 +24,7 @@ const Pokemon = ({ src }: Props) => {
 
   return line ? (
     <div className={styles.pokemon}>
-      <Img src={staticFile(`/assets/images/${src}`)} />
+      <Img src={`/assets/images/${src}`} />
     </div>
   ) : null;
 };
