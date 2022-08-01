@@ -1,7 +1,7 @@
 import { Audio } from 'remotion';
 import { staticFile } from 'remotion';
 import { AbsoluteFill, useCurrentFrame, useVideoConfig } from 'remotion';
-import data from './lyrics';
+import data, { Lyrics } from './lyrics';
 import { findLastIndex } from 'lodash';
 import Pokemon from './Pokemon';
 import { Background } from './Background';
@@ -32,7 +32,8 @@ export const MusicVideo = () => {
       startTime - LINE_OFFSET < frame / fps
   );
 
-  const lyricData = lyricIndex < 0 ? undefined : data[lyricIndex];
+  const lyricData: Lyrics | undefined =
+    lyricIndex < 0 ? undefined : data[lyricIndex];
 
   return (
     <AbsoluteFill>

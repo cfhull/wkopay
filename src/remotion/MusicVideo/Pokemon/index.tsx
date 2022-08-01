@@ -5,7 +5,7 @@ import data from '../lyrics';
 import styles from './pokemon.module.css';
 
 type Props = {
-  src: string;
+  src?: string;
 };
 
 const LINE_OFFSET = 0.5;
