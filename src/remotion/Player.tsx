@@ -30,7 +30,7 @@ const Player = ({ playerRef }: Props) => {
     <AbsoluteFill>
       <RemotionPlayer
         ref={playerRef}
-        controls
+        controls={import.meta.env.DEV}
         style={{ width: '100%', height: '100%' }}
         component={MusicVideo}
         durationInFrames={6660}
