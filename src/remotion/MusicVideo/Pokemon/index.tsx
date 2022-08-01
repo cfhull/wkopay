@@ -13,12 +13,12 @@ import Hitmonlee from '/assets/images/Hitmonlee.png';
 import Geodude from '/assets/images/Geodude.png';
 import Dratini from '/assets/images/Dratini.png';
 
-const preloadImage = (url) => {
+const preloadImage = (url: string): void => {
   const img = new Image();
   img.src = url;
 };
 
-const POKEMON = {
+const POKEMON: Record<string, string> = {
   Jigglypuff,
   Gengar,
   Marowak,
