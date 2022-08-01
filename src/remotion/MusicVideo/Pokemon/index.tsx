@@ -3,11 +3,16 @@ import { Img, staticFile } from 'remotion';
 import { useCurrentFrame, useVideoConfig } from 'remotion';
 import data from '../lyrics';
 import styles from './pokemon.module.css';
+
+type Props = {
+  src: string;
+};
+
 const LINE_OFFSET = 0.5;
 
-const Pokemon = ({ src }) => {
+const Pokemon = ({ src }: Props) => {
   const frame = useCurrentFrame();
-  const { durationInFrames, fps } = useVideoConfig();
+  const { fps } = useVideoConfig();
 
   const lineIndex = findLastIndex(
     data,

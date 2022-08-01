@@ -1,9 +1,7 @@
 import { Audio } from 'remotion';
-import { spring, staticFile } from 'remotion';
+import { staticFile } from 'remotion';
 import { AbsoluteFill, useCurrentFrame, useVideoConfig } from 'remotion';
 import data from './lyrics';
-import audio from './audio/wkopay.mp3';
-import Pokeball from '../../Pokeball';
 import { findLastIndex } from 'lodash';
 import Pokemon from './Pokemon';
 import { Background } from './Background';
