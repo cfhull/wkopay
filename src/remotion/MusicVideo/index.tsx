@@ -40,7 +40,7 @@ export const MusicVideo = () => {
     <AbsoluteFill>
       <Background />
       <Pokemon src={lyricData?.pokemon} />
-      <Audio src={staticFile('./assets/audio/wkopay.mp3')} />
+      <Audio src={staticFile('/assets/audio/wkopay.mp3')} />
       <div style={lyricStyles}>{lyricData?.content}</div>
     </AbsoluteFill>
   );

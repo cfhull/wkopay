@@ -19,7 +19,7 @@ const Pokemon = ({ src }) => {
 
   return line ? (
     <div className={styles.pokemon}>
-      <Img src={staticFile(`./assets/images/${src}`)} />
+      <Img src={staticFile(`/assets/images/${src}`)} />
     </div>
   ) : null;
 };

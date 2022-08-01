@@ -18,7 +18,7 @@
 @font-face {
   font-family: "Pokemon";
   src: local("Pokemon"),
-    url("./assets/fonts/Pokemon_Solid.ttf") format("truetype");
+    url("/assets/fonts/Pokemon_Solid.ttf") format("truetype");
   font-weight: normal;
   letter-spacing: 4px;
 
