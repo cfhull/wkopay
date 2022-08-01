@@ -1,7 +1,7 @@
 import { Img } from 'remotion';
 import styles from './pokemon.module.css';
 
-const images = import.meta.glob('/assets/*.png', { eager: true });
+const images: any = import.meta.glob('/assets/*.png', { eager: true });
 
 type Props = {
   src?: string;
@@ -10,7 +10,7 @@ type Props = {
 const Pokemon = ({ src }: Props) => {
   return src ? (
     <div className={styles.pokemon}>
-      <Img src={images.find((x) => x.endsWidth(src))} />
+      <Img src={images.find((x: string) => x.endsWidth(src))} />
     </div>
   ) : null;
 };
