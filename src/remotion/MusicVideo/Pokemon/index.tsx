@@ -1,9 +1,6 @@
+import { staticFile } from 'remotion';
 import { Img } from 'remotion';
 import styles from './pokemon.module.css';
-
-const images: Record<string, string> = import.meta.glob('/assets/*.png', {
-  eager: true,
-});
 
 type Props = {
   src?: string;
@@ -12,7 +9,7 @@ type Props = {
 const Pokemon = ({ src }: Props) => {
   return src ? (
     <div className={styles.pokemon}>
-      <Img src={images.find((x: string) => x.endsWith(src))} />
+      <Img src={staticFile(`/assets/images/${src}`)} />
     </div>
   ) : null;
 };
