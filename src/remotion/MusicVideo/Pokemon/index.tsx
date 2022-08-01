@@ -39,11 +39,7 @@ type Props = {
 const Pokemon = ({ src }: Props) => {
   return src ? (
     <div className={styles.pokemon}>
-      <Img
-        src={staticFile(
-          `${import.meta.env.PROD ? 'wkopay' : ''}${POKEMON[src]}`
-        )}
-      />
+      <Img src={POKEMON[src]} />
     </div>
   ) : null;
 };
