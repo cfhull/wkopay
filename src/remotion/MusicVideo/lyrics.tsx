@@ -3,7 +3,7 @@ export interface Lyrics {
   content: string;
   startOfParagraph: null;
   startTime: number;
-  pokemon: string;
+  pokemon?: string;
 }
 
 const lyrics: Lyrics[] = [
