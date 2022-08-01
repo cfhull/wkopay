@@ -3,6 +3,7 @@ export interface Lyrics {
   content: string;
   startOfParagraph: null;
   startTime: number;
+  pokemon: string;
 }
 
 const lyrics: Lyrics[] = [
