@@ -5,10 +5,13 @@ type Props = {
   src?: string;
 };
 
+const getImageUrl = (name) =>
+  new URL(`/assets/images/${name}`, import.meta.url).href;
+
 const Pokemon = ({ src }: Props) => {
   return src ? (
     <div className={styles.pokemon}>
-      <Img src={require(`/assets/images/${src}`)} />
+      <Img src={getImageUrl(src)} />
     </div>
   ) : null;
 };
