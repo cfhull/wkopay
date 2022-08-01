@@ -62,10 +62,17 @@ const lyrics: Lyrics[] = [
   },
   {
     duration: 0,
-    content:
-      "Take a Normal type like Jigglypuff, against the ghostly Gengar a battle's real tough!",
+    content: 'Take a Normal type like Jigglypuff',
     startOfParagraph: null,
     startTime: 32.34,
+    pokemon: 'Jigglypuff.png',
+  },
+  {
+    duration: 0,
+    content: "Against the ghostly Gengar a battle's real tough!",
+    startOfParagraph: null,
+    startTime: 34.5,
+    pokemon: 'Gengar.png',
   },
   {
     duration: 0,
@@ -77,7 +84,8 @@ const lyrics: Lyrics[] = [
     duration: 0,
     content: "'till you get ground down by a Marowak!",
     startOfParagraph: null,
-    startTime: 39.36,
+    startTime: 39.0,
+    pokemon: 'Marowak.png',
   },
   {
     duration: 0,
@@ -96,7 +104,8 @@ const lyrics: Lyrics[] = [
     content:
       "Don't ya bug me, with a Caterpie. For a Flying type the win's easy",
     startOfParagraph: null,
-    startTime: 47.58,
+    startTime: 45.75,
+    pokemon: 'Caterpie.png',
   },
   {
     duration: 0,
@@ -109,6 +118,7 @@ const lyrics: Lyrics[] = [
     content: "with Muk and it's poison gas",
     startOfParagraph: null,
     startTime: 51.3,
+    pokemon: 'Muk.png',
   },
   {
     duration: 0,
@@ -154,6 +164,7 @@ const lyrics: Lyrics[] = [
       'Reach higher with fire - go Flareon! Think twice about ice to be number one',
     startOfParagraph: null,
     startTime: 79.38,
+    pokemon: 'Flareon.png',
   },
   {
     duration: 0,
@@ -172,6 +183,7 @@ const lyrics: Lyrics[] = [
     content: 'Mewtwo is the best',
     startOfParagraph: null,
     startTime: 84.84,
+    pokemon: 'Mewtwo.png',
   },
   {
     duration: 0,
@@ -196,12 +208,14 @@ const lyrics: Lyrics[] = [
     content: "Hitmonlee's the key for your fighting mood",
     startOfParagraph: null,
     startTime: 91.53999999999999,
+    pokemon: 'Hitmonlee.png',
   },
   {
     duration: 0,
     content: "And you can rock 'n roll with Geodude",
     startOfParagraph: null,
     startTime: 93.53999999999999,
+    pokemon: 'Geodude.png',
   },
   {
     duration: 0,
@@ -209,6 +223,7 @@ const lyrics: Lyrics[] = [
       "Dratini comes first when you choose dragon, but evolution's the solution if you're gonna win!",
     startOfParagraph: null,
     startTime: 98.28,
+    pokemon: 'Dratini.png',
   },
   {
     duration: 0,
@@ -379,12 +394,14 @@ const lyrics: Lyrics[] = [
     content: "Yeah. I'll take a normal type like Jigglypuff",
     startOfParagraph: null,
     startTime: 186.54,
+    pokemon: 'Jigglypuff.png',
   },
   {
     duration: 0,
     content: "Don't ya bug me with a Caterpie (Yeah that's what I'm sayin')",
     startOfParagraph: null,
     startTime: 189.54,
+    pokemon: 'Caterpie.png',
   },
   {
     duration: 0,
@@ -397,6 +414,7 @@ const lyrics: Lyrics[] = [
     content: "Yeah, go Flareon, (ha, yeah that's my boy)",
     startOfParagraph: null,
     startTime: 196.06,
+    pokemon: 'Flareon.png',
   },
   {
     duration: 0,
@@ -409,12 +427,14 @@ const lyrics: Lyrics[] = [
     content: "But don't get ground down by a Marowak",
     startOfParagraph: null,
     startTime: 203.57999999999998,
+    pokemon: 'Marowak.png',
   },
   {
     duration: 0,
     content: 'Watch out for Mewtwo',
     startOfParagraph: null,
     startTime: 212.1,
+    pokemon: 'Mewtwo.png',
   },
   {
     duration: 0,

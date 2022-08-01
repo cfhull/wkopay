@@ -5,45 +5,43 @@ import data from './lyrics';
 import audio from './audio/wkopay.mp3';
 import Pokeball from '../../Pokeball';
 import { findLastIndex } from 'lodash';
+import Pokemon from './Pokemon';
+import { Background } from './Background';
 
-const subtitle: React.CSSProperties = {
-  fontFamily: 'SF Pro Text, Helvetica, Arial, sans-serif',
-  fontSize: 40,
+const lyricStyles: React.CSSProperties = {
+  fontFamily: 'Pokemon, Helvetica, Arial, sans-serif',
+  letterSpacing: 4,
+  fontSize: 80,
   textAlign: 'center',
   position: 'absolute',
-  bottom: 140,
+  bottom: '5%',
   width: '100%',
+  padding: '0 10%',
+  color: 'white',
+  WebkitTextStrokeWidth: '3px',
+  WebkitTextStrokeColor: 'black',
 };
 
 const LINE_OFFSET = 0.5;
 
 export const MusicVideo = () => {
   const frame = useCurrentFrame();
-  const { durationInFrames, fps } = useVideoConfig();
+  const { fps } = useVideoConfig();
 
-  const lineIndex = findLastIndex(
+  const lyricIndex = findLastIndex(
     data,
     ({ startTime }: { startTime: number }) =>
       startTime - LINE_OFFSET < frame / fps
   );
 
-  const line = lineIndex < 0 ? '' : data[lineIndex]?.content;
+  const lyricData = lyricIndex < 0 ? '' : data[lyricIndex];
 
   return (
     <AbsoluteFill>
-      <AbsoluteFill
-        style={{
-          background: `url(${staticFile(
-            './wkopay/assets/images/background_tile.png'
-          )})`,
-          objectFit: 'cover',
-          backgroundRepeat: 'repeat-x',
-          transform: `translateX(-${frame}px)`,
-          width: `calc(100% + ${durationInFrames}px)`,
-        }}
-      />
-      <Audio src={staticFile('./wkopay/assets/audio/wkopay.mp3')} />
-      <div style={subtitle}>{line}</div>
+      <Background />
+      <Pokemon src={lyricData?.pokemon} />
+      <Audio src={staticFile('./assets/audio/wkopay.mp3')} />
+      <div style={lyricStyles}>{lyricData?.content}</div>
     </AbsoluteFill>
   );
 };

@@ -1,13 +1,31 @@
 import { MusicVideo } from './MusicVideo';
 import { Player as RemotionPlayer, PlayerRef } from '@remotion/player';
 import { AbsoluteFill } from 'remotion';
-import { RefObject } from 'react';
+import { RefObject, useEffect, useState } from 'react';
+import { debounce } from 'lodash';
 
 type Props = {
   playerRef: RefObject<PlayerRef>;
 };
 
 const Player = ({ playerRef }: Props) => {
+  const [{ width, height }, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () =>
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+
+    window.addEventListener('resize', debounce(handleResize, 100));
+
+    return () => window.removeEventListener('resize', handleResize);
+  });
+
   return (
     <AbsoluteFill>
       <RemotionPlayer
@@ -17,8 +35,8 @@ const Player = ({ playerRef }: Props) => {
         component={MusicVideo}
         durationInFrames={6660}
         fps={30}
-        compositionWidth={1920}
-        compositionHeight={1080}
+        compositionWidth={width}
+        compositionHeight={height}
       />
     </AbsoluteFill>
   );
