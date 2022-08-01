@@ -32,7 +32,7 @@ export const MusicVideo = () => {
       startTime - LINE_OFFSET < frame / fps
   );
 
-  const lyricData = lyricIndex < 0 ? '' : data[lyricIndex];
+  const lyricData = lyricIndex < 0 ? undefined : data[lyricIndex];
 
   return (
     <AbsoluteFill>
