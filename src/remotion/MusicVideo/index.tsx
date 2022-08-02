@@ -9,14 +9,14 @@ import audio from '/assets/audio/wkopay.mp3';
 const lyricStyles: React.CSSProperties = {
   fontFamily: 'Pokemon, Helvetica, Arial, sans-serif',
   letterSpacing: 4,
-  fontSize: 80,
+  fontSize: '6vh',
   textAlign: 'center',
   position: 'absolute',
   bottom: '5%',
   width: '100%',
   padding: '0 10%',
   color: 'white',
-  WebkitTextStrokeWidth: '3px',
+  WebkitTextStrokeWidth: '2px',
   WebkitTextStrokeColor: 'black',
 };
 

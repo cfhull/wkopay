@@ -37,11 +37,7 @@ type Props = {
   src?: string;
 };
 const Pokemon = ({ src }: Props) => {
-  return src ? (
-    <div className={styles.pokemon}>
-      <Img src={POKEMON[src]} />
-    </div>
-  ) : null;
+  return src ? <Img className={styles.pokemon} src={POKEMON[src]} /> : null;
 };
 
 export default Pokemon;

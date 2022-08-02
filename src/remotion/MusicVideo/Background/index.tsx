@@ -12,6 +12,7 @@ export const Background = () => {
       style={{
         background: `url(${background})`,
         backgroundRepeat: 'repeat-x',
+        backgroundSize: 'cover',
         transform: `translateX(-${frame}px)`,
         width: `calc(100% + ${durationInFrames}px)`,
       }}

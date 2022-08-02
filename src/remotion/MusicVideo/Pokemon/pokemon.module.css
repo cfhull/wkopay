@@ -1,3 +1,6 @@
 .pokemon {
   position: absolute;
+  max-height: 80vh;
+  max-width: 80vw;
+  inset: 10vw
 }
