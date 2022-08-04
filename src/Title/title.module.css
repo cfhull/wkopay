@@ -1,0 +1,9 @@
+.title {
+  font-family: Pokemon, Helvetica, Arial, sans-serif;
+  color: #FFDE00;
+  -webkit-text-stroke-width: 0.05em;
+  -webkit-text-stroke-color: #3B4CCA;
+  text-shadow: -3px 3px #2c3ba4;
+  userSelect: none;
+  letter-spacing: 0.15em;
+}

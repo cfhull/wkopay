@@ -2,7 +2,8 @@ import { PlayerRef } from '@remotion/player';
 import { useRef, useState } from 'react';
 import { AbsoluteFill } from 'remotion';
 import './App.css';
-import Pokeball from './Pokeball';
+import MainMenuBackground from './MainMenuBackground';
+import PokeballOverlay from './PokeballOverlay';
 import Player from './remotion/Player';
 
 const App = () => {
@@ -16,7 +17,11 @@ const App = () => {
   return (
     <AbsoluteFill>
       <Player playerRef={playerRef} />
-      <Pokeball isPokeballOpen={isPokeballOpen} openPokeball={openPokeball} />
+      <PokeballOverlay isPlaying={isPokeballOpen} />
+      <MainMenuBackground
+        isPokeballOpen={isPokeballOpen}
+        openPokeball={openPokeball}
+      />
     </AbsoluteFill>
   );
 };

@@ -1,26 +1,35 @@
-import { AbsoluteFill } from 'remotion';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './pokeball.module.css';
+import pokeballImage from '/assets/images/pokeball.png';
+import explosionImage from '/assets/images/explosion.png';
+
 import clsx from 'clsx';
 
 type Props = {
-  isPokeballOpen: boolean;
-  openPokeball: (event: React.MouseEvent<HTMLElement>) => void;
+  style: React.CSSProperties;
+  onClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  handleRemove: () => void;
 };
 
-const Pokeball = ({ isPokeballOpen, openPokeball }: Props) => {
+const Pokeball = ({ style = {}, onClick, handleRemove }: Props) => {
+  const [touched, setTouched] = useState(false);
+
   return (
-    <AbsoluteFill
-      className={clsx(styles.pokeball, { [styles.isOpen]: isPokeballOpen })}
-    >
-      <div className={styles.top}>
-        <div className={styles.middle} />
-        <div className={styles.button}>
-          <div className={styles.midButton} onClick={openPokeball} />
-        </div>
-      </div>
-      <div className={styles.bottom} />
-    </AbsoluteFill>
+    <div
+      className={clsx(styles.pokeball)}
+      style={{
+        ...style,
+        backgroundImage: `url(${touched ? explosionImage : pokeballImage})`,
+        backgroundSize: 'cover',
+        pointerEvents: touched ? 'none' : 'all',
+      }}
+      onClick={async () => {
+        setTouched(true);
+        onClick();
+        await new Promise((r) => setTimeout(r, 1000));
+        handleRemove();
+      }}
+    />
   );
 };
 

@@ -5,9 +5,9 @@ import { findLastIndex } from 'lodash';
 import Pokemon from './Pokemon';
 import { Background } from './Background';
 import audio from '/assets/audio/wkopay.mp3';
+import Title from '../../Title';
 
 const lyricStyles: React.CSSProperties = {
-  fontFamily: 'Pokemon, Helvetica, Arial, sans-serif',
   letterSpacing: 4,
   fontSize: '6vh',
   textAlign: 'center',
@@ -15,9 +15,6 @@ const lyricStyles: React.CSSProperties = {
   bottom: '5%',
   width: '100%',
   padding: '0 10%',
-  color: 'white',
-  WebkitTextStrokeWidth: '2px',
-  WebkitTextStrokeColor: 'black',
 };
 
 const LINE_OFFSET = 0.5;
@@ -42,7 +39,7 @@ export const MusicVideo = () => {
       {lyricData && (
         <>
           <Pokemon src={lyricData.pokemon} />
-          <div style={lyricStyles}>{lyricData.content}</div>
+          <Title style={lyricStyles}>{lyricData.content}</Title>
         </>
       )}
     </AbsoluteFill>

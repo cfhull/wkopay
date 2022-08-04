@@ -7,6 +7,8 @@
 	},
 	"typescript.enablePromptUseWorkspaceTsdk": true,
 	"cSpell.words": [
-		"Pokeball"
+		"lerp",
+		"Pokeball",
+		"pokeballs"
 	]
 }
