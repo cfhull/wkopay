@@ -1,4 +1,3 @@
-
 :root {
   --red: #f00000;
   --white: #f0f0f0;
@@ -10,6 +9,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 
 .top {
@@ -37,7 +37,7 @@
   width: 100%;
   flex: 1;
   background: var(--white);
-  border-top: 2px solid var(--black)
+  border-top: 2px solid var(--black);
 }
 
 .button {
@@ -52,7 +52,7 @@
   background: var(--white);
 }
 
-.midButton{
+.midButton {
   display: flex;
   margin: auto;
   background: var(--white);
@@ -71,18 +71,18 @@
 
 /* Open Animation */
 
-.pokeball.isOpen {
+.mainMenuBackground.isOpen {
   pointer-events: none;
 }
 
-.pokeball.isOpen > * {
+.mainMenuBackground > * {
   transition: transform 1000ms ease-in-out;
 }
 
-.pokeball.isOpen .top {
+.mainMenuBackground.isOpen .top {
   transform: translateY(calc(-50vh - 20%));
 }
 
-.pokeball.isOpen .bottom {
+.mainMenuBackground.isOpen .bottom {
   transform: translateY(calc(50vh + 20%));
 }

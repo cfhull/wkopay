@@ -16,13 +16,14 @@
 }
 
 @font-face {
-  font-family: "Pokemon";
-  src: local("Pokemon"),
-    url("/assets/fonts/Pokemon_Solid.ttf") format("truetype");
+  font-family: 'Pokemon';
+  src: local('Pokemon'),
+    url('/assets/fonts/Pokemon_Solid.ttf') format('truetype');
   font-weight: normal;
   letter-spacing: 4px;
 }
 
 body {
   overflow: hidden;
+  user-select: none;
 }
