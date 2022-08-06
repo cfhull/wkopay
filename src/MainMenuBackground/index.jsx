@@ -4,7 +4,6 @@ import styles from './mainMenuBackground.module.css';
 import clsx from 'clsx';
 import { GAME_STATE } from '../constants';
 
-
 const MainMenuBackground = ({ gameState, startGame }) => {
   return (
     <AbsoluteFill
@@ -15,7 +14,14 @@ const MainMenuBackground = ({ gameState, startGame }) => {
       <div className={styles.top}>
         <div className={styles.middle} />
         <div className={styles.button}>
-          <div className={styles.midButton} onClick={startGame} />
+          <div
+            className={styles.midButton}
+            onClick={() => {
+              if (gameState === GAME_STATE.MAIN_MENU) {
+                startGame();
+              }
+            }}
+          />
         </div>
       </div>
       <div className={styles.bottom} />

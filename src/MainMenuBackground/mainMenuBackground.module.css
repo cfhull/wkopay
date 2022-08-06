@@ -43,7 +43,7 @@
 .button {
   position: absolute;
   display: flex;
-  bottom: -30%;
+  bottom: -14vh;
   border: 4vh solid var(--black);
   border-radius: 50%;
   height: 40%;
