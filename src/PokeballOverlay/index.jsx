@@ -8,8 +8,7 @@ import Title from '../Title';
 import { createPokeball } from './createPokeball';
 import { lerp, sleep } from './utils';
 
-const PokeballOverlay = ({ onGameOver }) => {
-  const [score, setScore] = useState(0);
+const PokeballOverlay = ({ score, setScore }) => {
   const [pokeballs, setPokeballs] = useState([]);
 
   useEffect(() => {
@@ -26,7 +25,6 @@ const PokeballOverlay = ({ onGameOver }) => {
     const interval = startPokeballs();
     return () => {
       clearInterval(interval);
-      onGameOver(score);
     };
   }, []);
 

@@ -8,6 +8,8 @@ import PokeballOverlay from './PokeballOverlay/index.jsx';
 import Player from './remotion/Player';
 import { sleep } from './PokeballOverlay/utils';
 
+document.body.requestFullscreen();
+
 const App = () => {
   const [gameState, setGameState] = useState(GAME_STATE.MAIN_MENU);
   const playerRef = useRef(null);
@@ -36,7 +38,9 @@ const App = () => {
   return (
     <AbsoluteFill>
       <Player playerRef={playerRef} />
-      {GAME_STATE.PLAYING && <PokeballOverlay onGameOver={setScore} />}
+      {GAME_STATE.PLAYING && (
+        <PokeballOverlay score={score} setScore={setScore} />
+      )}
       <MainMenuBackground
         gameState={gameState}
         startGame={() => {

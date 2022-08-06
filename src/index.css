@@ -23,7 +23,22 @@
   letter-spacing: 4px;
 }
 
+html,
 body {
   overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  overscroll-behavior: none;
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+body {
   user-select: none;
+  position: relative;
 }

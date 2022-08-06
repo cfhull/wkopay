@@ -43,10 +43,10 @@
 .button {
   position: absolute;
   display: flex;
-  bottom: -20%;
-  border: 40px solid var(--black);
+  bottom: -30%;
+  border: 4vh solid var(--black);
   border-radius: 50%;
-  height: 25%;
+  height: 40%;
   aspect-ratio: 1;
   margin: auto;
   background: var(--white);

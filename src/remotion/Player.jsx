@@ -1,7 +1,7 @@
 import { MusicVideo } from './MusicVideo';
-import { Player as RemotionPlayer, PlayerRef } from '@remotion/player';
+import { Player as RemotionPlayer } from '@remotion/player';
 import { AbsoluteFill } from 'remotion';
-import { RefObject, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { debounce } from 'lodash';
 
 const Player = ({ playerRef }) => {
